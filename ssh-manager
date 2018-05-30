@@ -32,7 +32,7 @@ function exec_ping() {
 			ping -n 1 -i $PING_DEFAULT_TTL $@
 			;;
 		*)
-			ping -c 1 -W 1 -t$PING_DEFAULT_TTL $@
+			ping -c 1 -W 1 -t$PING_DEFAULT_TTL $@ >/dev/null 2>&1
 			;;
 	esac
 }
